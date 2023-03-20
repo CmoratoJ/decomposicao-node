@@ -6,7 +6,11 @@
   "scripts": {
     "start:dev": "tsx watch src/server.ts",
     "start": "node build/server.js",
-    "build": "tsup src --out-dir build"
+    "build": "tsup src --out-dir build",
+    "test": "vitest run --dir src/services",
+    "test:watch": "vitest --dir src/services",
+    "test:coverage": "vitest run --coverage",
+    "test:ui": "vitest --ui"
   },
   "keywords": [],
   "author": "",
@@ -17,7 +21,9 @@
     "eslint": "8.36.0",
     "tsup": "6.6.3",
     "tsx": "3.12.5",
-    "typescript": "5.0.2"
+    "typescript": "5.0.2",
+    "vite-tsconfig-paths": "4.0.7",
+    "vitest": "0.29.5"
   },
   "dependencies": {
     "dotenv": "16.0.3",
